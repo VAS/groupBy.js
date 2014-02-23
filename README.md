@@ -34,3 +34,13 @@ array.groupBy('name') would return a new array:
 		{ name : 'joan', email : 'joan@example.com' },
 		{ name : 'mary', email : 'mary@example.com' }
 	];
+
+##Warning
+By design, groupBy will merge two objects with the same key but different values into an array.
+If either (or both) field is an array, it will concat the two. This means it will always produce a flat array.
+
+###Examples of output
+Two fields are strings
+	var a = { key : 'hello' }
+	var b = { key : 'world' }
+	[a,b].groupBy('key') => [{key : ['hello','world']}] 
