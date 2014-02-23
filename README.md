@@ -5,8 +5,8 @@ Group an array of objects according to a common key
 
 ##About
 Groups objects in an array according to a specific key,
-merging identical fields, or creating an array.
-It ignores non-object elements.
+merging identical fields, or creating an array of differing fields.
+It ignores non-object elements and concatenates arrays on merge.
 
 ##Example
 Let's say you have an array of objects:
