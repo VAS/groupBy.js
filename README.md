@@ -43,14 +43,14 @@ array.groupBy('name') would return a new array:
 ###Examples of output
 Two fields are strings
 
-	var a = { key : 'hello' }
-	var b = { key : 'world' }
-	[a,b].groupBy('key') => [{key : ['hello','world']}]
+	var a = { key : 'admin', word : 'hello' }
+	var b = { key : 'admin', word : 'world' }
+	[a,b].groupBy('key') => [{key : 'admin', word : ['hello','world']}]
 	
 One field is an array
 
-	var a = { key : [1,2,3] }
-	var b = { key : ['string', 4] }
-	[a,b].groupBy('key') => [{key : [1,2,3,'string',4]}]	
+	var a = { key : 'admin', word : [1,2,3] }
+	var b = { key : 'admin', word : ['string', 4] }
+	[a,b].groupBy('key') => [{key : admin, word : [1,2,3,'string',4]}]	
 	
 
