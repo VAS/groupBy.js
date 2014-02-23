@@ -1,4 +1,5 @@
-//Choose flavor:
+// Choose flavor (standard function or array prototype):
+
 //function groupBy(array, key) {
 Array.prototype.groupBy = function(key) {
 
