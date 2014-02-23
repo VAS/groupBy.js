@@ -20,7 +20,7 @@ Let's say you have an array of objects:
 		{ otherkey : 'super' }
 	];
 
-array.groupBy(key) would return a new array:
+array.groupBy('name') would return a new array:
 
 	[
 		{
