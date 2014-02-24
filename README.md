@@ -9,6 +9,7 @@ Easily group an array of objects according to a common key. No duplication of id
 ##Example
 Let's say you have an array of objects:
 
+```javascript
 	var array = [
 		{ name : 'steve', email : 'steve@example.com' },
 		{ name : 'joan', email : 'joan@example.com' },
@@ -16,9 +17,11 @@ Let's say you have an array of objects:
 		{ name : 'steve', email : ['steve2@example.com', 'steve3@example.com'] },
 		{ otherkey : 'super' }
 	];
+```
 
-array.groupBy('name') would return a new array:
+```array.groupBy('name')``` would return a new array:
 
+```javascript
 	[
 		{
 			name  : 'steve', 
@@ -31,6 +34,7 @@ array.groupBy('name') would return a new array:
 		{ name : 'joan', email : 'joan@example.com' },
 		{ name : 'mary', email : 'mary@example.com' }
 	];
+```
 
 ##Warning
 - Any object in the array not containing the key **will not be included** in the output array.
