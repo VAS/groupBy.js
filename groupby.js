@@ -3,7 +3,7 @@
 //function groupBy(array, key) {
 Array.prototype.groupBy = function(key) {
 
-	var self = array || this;
+	var self = this;
 	var map = {};
 
 	// make map of common, groupable objects
