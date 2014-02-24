@@ -47,7 +47,12 @@ Two fields are strings
 	var a = { key : 'admin', word : 'hello' }
 	var b = { key : 'admin', word : 'world' }
 	var c = { key : 'user', word : 'sweet' }
-	[a,b,c].groupBy('key') => [{key : 'admin', word : ['hello','world']}, {key: 'user', word : 'sweet'}]
+	
+	[a,b,c].groupBy('key') => 
+	[
+		{ key : 'admin', word : ['hello','world'] },
+		{ key : 'user', word : 'sweet' }
+	]
 ```
 
 One field is an array
