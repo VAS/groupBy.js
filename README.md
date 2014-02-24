@@ -43,15 +43,17 @@ Let's say you have an array of objects:
 
 ###Examples of output
 Two fields are strings
-
+```javascript
 	var a = { key : 'admin', word : 'hello' }
 	var b = { key : 'admin', word : 'world' }
-	[a,b].groupBy('key') => [{key : 'admin', word : ['hello','world']}]
-	
-One field is an array
+	var c = { key : 'user', word : 'sweet' }
+	[a,b,c].groupBy('key') => [{key : 'admin', word : ['hello','world']}, {key: 'user', word : 'sweet'}]
+```
 
+One field is an array
+```javascript
 	var a = { key : 'admin', word : [1,2,3] }
 	var b = { key : 'admin', word : ['string', 4] }
 	[a,b].groupBy('key') => [{key : admin, word : [1,2,3,'string',4]}]	
-	
+```	
 
