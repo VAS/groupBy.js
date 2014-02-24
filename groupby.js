@@ -36,13 +36,15 @@ Array.prototype.groupBy = function(key) {
 	function merge(source, destination) {
 		for (var p in source) {
 
-			// Property in destination object set; update its value.
+			// if Object, call merge recursively
 			if ( source[p].constructor == Object ) {
 				if(!destination[p]) destination[p] = {};
 				destination[p] = merge(source[p], destination[p]);
+				
+			// if destination exists and source differs
 			} else if( destination[p] && destination[p] !== source[p] ) {
 				
-				// if destination is an array
+				// if destination is already an array
 				if(destination[p] instanceof Array ) {
 					destination[p] = destination[p].concat(source[p]);
 				} else {
@@ -51,7 +53,7 @@ Array.prototype.groupBy = function(key) {
 					destination[p].push(temp);
 					destination[p] = destination[p].concat(source[p]);
 				}
-				
+			// if destination doesn't exist, simply write
 			} else if( !destination[p]) {
 				destination[p] = source[p];
 			}
