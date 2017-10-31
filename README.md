@@ -3,10 +3,10 @@ groupBy.js
 
 Group an array of objects according to a common key
 
-##About
+## About
 Easily group an array of objects according to a common key. No duplication of identical fields, and automatic array creation when fields with the same key clash. It ignores non-object elements and concatenates arrays in fields on merge.
 
-##Example
+## Example
 Let's say you have an array of objects:
 
 ```javascript
@@ -36,12 +36,12 @@ Let's say you have an array of objects:
 	];
 ```
 
-##Warning
+## Warning
 - Any object in the array not containing the key **will not be included** in the output array.
 - By design, groupBy will merge two objects with the same key but different values into an array.
 - If either (or both) field is an array, it will concat the two. This means it **will always produce a flat array**.
 
-###Examples of output
+### Examples of output
 Two fields are strings
 ```javascript
 	var a = { key : 'admin', word : 'hello' }
